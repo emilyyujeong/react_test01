@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from './Footer';
+import Header from './Header';
+import Main from './Main';
+
 
 function App() {
+  // 컴포넌트 만들어서 재사용할꺼임...
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         hehehehaha
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrap">
+      {/* header component */}
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

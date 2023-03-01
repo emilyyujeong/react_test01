@@ -272,35 +272,35 @@ flex: 1;
 /* Footernpm  */
 
 
-.Footernpm  {
+.Footer  {
    border-top: 1px solid #ddd;
     color: #000;
     padding: 0 0 50px 0;
 }
 
-.Footernpm  .top {
+.Footer .top {
     line-height: 80px;
     border-bottom: 1px solid #fff;
 }
 
-.Footernpm  .inner {
+.Footer  .inner {
     display: flex;
     justify-content: space-between;
     width: 1200px;
     margin: 0 auto;
 }
 
-.Footernpm  .top .left {
+.Footer  .top .left {
     font-size: 0;
 }
 
-.Footernpm  .top .left li {
+.Footer  .top .left li {
     display: inline-block;
     font-size: 15px;
 }
 
 
-.Footernpm  .top .left li~li::before {
+.Footer  .top .left li~li::before {
     content: "";
     margin: 0 20px;
     display: inline-block;
@@ -310,12 +310,12 @@ flex: 1;
     background: #333;
 }
 
-.Footernpm  .top .right {
+.Footer  .top .right {
     display: flex;
     gap: 10px;
 }
 
-.Footernpm  .top .right i {
+.Footer  .top .right i {
     font-size: 20px;
     padding: 10px;
     background: #f2f2f2;

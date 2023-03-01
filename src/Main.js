@@ -11,6 +11,7 @@ function Main() {
         { h3: 'slide01', p: 'content01' },
         { h3: 'slide02', p: 'content02' },
         { h3: 'slide03', p: 'content03' },
+        { h3: 'slide04', p: 'content04' },
     ];
     const setting = {
         arrows: false,

@@ -13,7 +13,7 @@ function Main() {
         { h3: 'slide03', p: 'content03' },
     ];
     const setting = {
-        dots: true,
+        arrows: false,
         afterChange: idx => setNum(idx)
     }
     return (
@@ -27,15 +27,12 @@ function Main() {
                     슬라이드.map((it, idx) => {
                         return (
                             <li className={`itm0${idx + 1}`}>
-                                <h3>{it.h3}</h3>
-                                <p>{it.p}</p>
                             </li>
                         )
                     }
                     )
                 }
             </Slider>
-            {console.log(SL.current)}
             <div className="num">
                 <strong>{num > 8 ? '' : 0}{num + 1}</strong> / <span>{num > 8 ? '' : 0}{슬라이드.length}</span>
             </div>
@@ -44,26 +41,141 @@ function Main() {
                 {/* SL = {current: slider} ---> SL.current = slider */}
                 <BsArrowRight onClick={() => SL.current.slickNext()} />
             </div>
-            {
-                ['1번', '2번', '3번'].map((it, idx) => {
-                    return (
-                        <li onClick={() => SL.current.slickGoTo(idx)}>{it}</li>
-                    )
-                })
-            }
+            
 
-            <div className="tab">
-                <ul>
-                    {
-                        ['1번메뉴', '2번메뉴', '3번메뉴'].map((it, idx) => {
-                            return (
-                                <li onClick={() => setIdx(idx)}>{it}</li>
-                            )
-                        })
-                    }
-                </ul>
-                <div>{슬라이드[idx].p}</div>
+
+<>
+
+<section class="mainContent">
+           <h2 class="find_institute">학원바로가기</h2>
+            <div class="inner brand_item_box">
+                <div class="brand_item itm01">
+                    <div class="cap">
+                        <span class="brand_logo">
+                             
+                        </span>
+                        <dl class="brand_info">
+                            <span class="period">
+                             <span class="term">1학기 봄</span>
+                              <span class="iblock">23.02.27</span>    
+                              <span class="iblock">~23.05.24</span>    
+                            </span>
+                            <dt>언어, 사고, 예술의 결합으로 창의사고력 개발</dt>
+                           <dd class="des">언어, 사고의 유기적인 결합으로 창의사고력 쑥쑥! Creative Learning의 NO.1 에이프릴어학원</dd>
+                       </dl>
+
+                    </div>
+                    <div class="brand_imgbox">
+                        
+                    </div>
+                </div>
+                <div class="brand_item itm02">
+                    <div class="cap">
+                        <span class="brand_logo">
+                              
+                        </span>
+                        <dl class="brand_info">
+                            <span class="period">
+                             <span class="term">1학기 봄</span>
+                              <span class="iblock">23.02.27</span>    
+                              <span class="iblock">~23.05.24</span>    
+                            </span>
+                            <dt>언어, 사고, 예술의 결합으로 창의사고력 개발</dt>
+                           <dd class="des">언어, 사고의 유기적인 결합으로 창의사고력 쑥쑥! Creative Learning의 NO.1 에이프릴어학원</dd>
+                       </dl>
+
+                    </div>
+                    <div class="brand_imgbox">
+                      
+                    </div>
+                </div>
+                <div class="brand_item itm03">
+                    <div class="cap">
+                        <span class="brand_logo">
+                              
+                        </span>
+                        <dl class="brand_info">
+                            <span class="period">
+                             <span class="term">1학기 봄</span>
+                              <span class="iblock">23.02.27</span>    
+                              <span class="iblock">~23.05.24</span>    
+                            </span>
+                            <dt>언어, 사고, 예술의 결합으로 창의사고력 개발</dt>
+                           <dd class="des">언어, 사고의 유기적인 결합으로 창의사고력 쑥쑥! Creative Learning의 NO.1 에이프릴어학원</dd>
+                       </dl>
+
+                    </div>
+                    <div class="brand_imgbox">
+                     
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
             </div>
+        </section>
+
+
+        <section class="mainBanner">
+            <div class="inner">
+
+                <div class="left">
+                    
+                </div>
+                <div class="right">
+                    <div class="text">
+                        <h2 class="title">크레버스 소식</h2>
+                        <a href=""><span>더보기</span></a>
+                    </div>
+                  
+                    <ul class="news_list">
+                        <li><span class="subj">청담어학원 2월 27일(월) 봄학기 개강</span> 
+                        <span class="date">2023.02.03</span></li>
+                        <li><span class="subj">April어학원 2월 27일(월) 봄학기 개강</span> 
+                        <span class="date">2023.02.01</span></li>
+                        <li><span class="subj">CMS 영재교육센터 3월 2일(목) 봄학기 개강</span> 
+                        <span class="date">2023.02.01</span></li>
+                    </ul>
+    
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mainChannel">
+          <div class="inner">
+          <div class="sns_left">
+               <figure>
+               <h2 class="title">크레버스 스토리</h2>
+                <a href=""></a> 
+                </figure>
+         </div>
+          <div class="sns_right">
+               <figure>
+               <h2 class="title">톡톡에듀</h2>
+               <a href=""></a> 
+                </figure>
+            </div>
+           </div>
+        </section>
+
+
+</>
+
+
+
+
+
+
+
+
+
         </main>
     )
 }

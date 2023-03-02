@@ -1,6 +1,8 @@
 import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
+import TopBanner from './TopBanner';
+
 
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
   return (
     <div className="wrap">
       {/* header component */}
+      <TopBanner />
       <Header />
       <Main />
       <Footer />

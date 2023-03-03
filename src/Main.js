@@ -54,22 +54,27 @@ function Main() {
                         <span>
                             <select>
                                 <option>브랜드 선택</option>
-                                <option>두번째 선택항목</option>
-                                <option>세번째 선택항목</option>
+                                <option>청담어학원</option>
+                                <option>April어학원</option>
+                                <option>아이가르텐</option>
+                                <option>CMS 영재교육센터</option>
                             </select>
                         </span>
                         <span>
                             <select>
                                 <option>지역 선택</option>
-                                <option>두번째 선택항목</option>
-                                <option>세번째 선택항목</option>
+                                <option>강원</option>
+                                <option>경기</option>
+                                <option>광주/전남</option>
+                                <option>부산/경남</option>
+                                <option>서울</option>
+                                <option>전주/전북</option>
+                                <option>제주</option>
                             </select>
                         </span>
                         <span>
                             <select>
                                 <option>학원 선택</option>
-                                <option>두번째 선택항목</option>
-                                <option>세번째 선택항목</option>
                             </select>
                         </span>
 

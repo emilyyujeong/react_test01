@@ -37,7 +37,7 @@ function Main() {
                 }
             </Slider>
             <div className="num">
-                <strong>{num > 8 ? '' : 0}{num + 1}</strong> / <span>{num > 8 ? '' : 0}{슬라이드.length}</span>
+                <strong>{num > 9 ? '' : 0}{num + 1}</strong> / <span>{num > 9 ? '' : 0}{슬라이드.length}</span>
             </div>
             <div className="arrow">
                 <BsChevronLeft className="arrow_left" onClick={() => SL.current.slickPrev()} />

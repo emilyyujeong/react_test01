@@ -19,6 +19,12 @@ function Header() {
                             <li><a href="">이벤트</a></li>
                         </ul>
                     </nav>
+
+                    <div className="m_open">
+                        <button className="m_btn">
+                            <span>mobile open button</span>
+                        </button>
+                    </div>
                 </div>
             </>
         </header>

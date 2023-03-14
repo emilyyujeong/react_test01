@@ -43,13 +43,20 @@
     border-left: 1px solid #ddd;
 }
 
+@media (max-width: 768px) {
+    .TopBanner {
+        display: none
+    }
 
-/* HEADER */
+}
+
+
+
+
 
 .Header {
     background: #fff;
     line-height: 100px;
-
 }
 
 .Header h1 {
@@ -71,9 +78,7 @@
     display: flex;
     gap: 80px;
     font-weight: 700;
-    font-size: 20px;
-    color: #303030;
-
+    font-size: 18px;
 }
 
 .Header .gnb>ul a {
@@ -84,27 +89,246 @@
     color: #00babb;
 }
 
+
+
+/* MOBILE OPEN BUTTON CSS STYLE */
+
+
+.Header h1 img {
+    width: 30%;
+}
+
+button {
+    vertical-align: middle;
+    cursor: pointer;
+    display: none;
+}
+
+.btn_o {
+    border: none;
+    outline: none;
+    line-height: 1;
+}
+
+.m_btn {
+    position: relative;
+    font-size: 0;
+    width: 50px;
+    height: 40px;
+    right: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+}
+
+.m_btn::before,
+.m_btn::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #000;
+    transition: 0.5s;
+}
+
+.m_btn::before {
+    top: 5px;
+}
+
+.m_btn::after {
+    bottom: 6px;
+}
+
+.m_btn.on::before {
+    transform: translate(-100px, 0);
+    opacity: 0;
+}
+
+
+.m_btn.on::after {
+    transform: translate(100px, 0);
+    opacity: 0;
+}
+
+.m_btn span::before,
+.m_btn span::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #000;
+    transition: 0.5s;
+}
+
+.m_btn.on span::before {
+    transform: rotate(135deg);
+}
+
+.m_btn.on span::after {
+    transform: rotate(-135deg);
+}
+
+
+
+
+
+
+/* MOBILE RESPONSIVE VERSION HEADER(MENU) */
+
+@media (max-width: 768px) {
+    button {
+        display: block;
+    }
+
+    .Header h1 {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .Header.on h1 {
+        position: fixed;
+    }
+
+    .Header .gnb {
+        position: relative;
+        z-index: 9998;
+        margin: 0 0 0 0;
+    }
+
+
+    .Header .inner::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+    }
+
+    .Header.on .inner::before {
+        display: block;
+    }
+
+    .Header .search input {
+        border-bottom: none;
+    }
+
+
+    .Header .gnb>ul {
+        flex-direction: column;
+        gap: 40px;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 9999;
+
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-right: 1px solid #ddd;
+
+        padding: 150px 15px 0 15px;
+    }
+
+    .Header.on .gnb>ul {
+        left: 0;
+    }
+
+    .Header .gnb>ul li {
+        line-height: 10px;
+    }
+
+    .Header .gnb>ul>li~li::before {
+        display: none;
+    }
+
+
+    .Header:hover .gnb::before {
+        display: none;
+    }
+
+    .Header .m_open {
+        position: fixed;
+        top: 35px;
+        right: -30px;
+        z-index: 9999;
+
+        display: block;
+        line-height: 1;
+    }
+
+}
+
+
+
 /* mainVisual slide */
 
-.slide .itm01 {
-    background: url(../public/assets/mainVisual01.jpg) no-repeat center center/cover;
-    height: 460px;
+
+/* MOBILE RESPONSIVE VERSION CONTENT(MAINVISUAL) */
+
+@media only screen and (max-width: 768px) {
+    .slide .itm01 {
+        background: url('../public/assets/mainVisual01_small.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
 }
 
-.slide .itm02 {
-    background: url(../public/assets/mainVisual02.jpg) no-repeat center center/cover;
-    height: 460px;
+@media only screen and (min-width: 768px) {
+    .slide .itm01 {
+        background: url('../public/assets/mainVisual01.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
 }
 
-.slide .itm03 {
-    background: url(../public/assets/mainVisual03.jpg) no-repeat center center/cover;
-    height: 460px;
+@media only screen and (max-width: 768px) {
+    .slide .itm02 {
+        background: url('../public/assets/mainVisual02_small.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
 }
 
-.slide .itm04 {
-    background: url(../public/assets/mainVisual04.jpg) no-repeat center center/cover;
-    height: 460px;
+@media only screen and (min-width: 768px) {
+    .slide .itm02 {
+        background: url('../public/assets/mainVisual02.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
 }
+
+@media only screen and (max-width: 768px) {
+    .slide .itm03 {
+        background: url('../public/assets/mainVisual03_small.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slide .itm03 {
+        background: url('../public/assets/mainVisual03.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slide .itm04 {
+        background: url('../public/assets/mainVisual04_small.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slide .itm04 {
+        background: url('../public/assets/mainVisual04.jpg')no-repeat center center/cover;
+        height: 460px;
+    }
+}
+
 
 
 .num {
@@ -126,9 +350,8 @@
 }
 
 
+
 /* mainContent */
-
-
 
 select {
     width: 200px;
@@ -152,11 +375,36 @@ select {
 
 
 
+@media (max-width: 768px) {
+    select {
+        text-align: center;
+
+    }
+
+    .select_branch {
+        flex-direction: column;
+        gap: 10px;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
 .mainContent {
     padding: 100px 0;
 
 }
-
 
 
 .mainContent h2 {
@@ -167,9 +415,6 @@ select {
     margin-bottom: 50px;
 }
 
-.search {
-    font-size: 20px;
-}
 
 .mainContent .inner {
     display: flex;
@@ -179,40 +424,27 @@ select {
 .mainContent .brand_item {
     height: 580px;
     border-radius: 20px;
-
 }
 
 .mainContent .brand_item .cap {
-    padding: 30px 20px;
+    padding: 30px 35px;
+}
+
+.mainContent .brand_logo {
+    display: block;
+    padding-top: 5px;
 }
 
 .mainContent .brand_item .brand_info {
-    line-height: 50px;
+    line-height: 30px;
     color: #fff;
-
-}
-
-.mainContent .brand_item .brand_info .des {
     padding: 30px 0;
-    line-height: 30px;
-
-}
-
-
-.mainContent .brand_item .brand_imgbox img {
-    float: right;
-    padding-right: 20px;
-}
-
-.mainContent .brand_item .brand_logo {
-    display: block;
-    height: 60px;
-    line-height: 30px;
 }
 
 .mainContent .brand_item .brand_info dt {
     font-size: 30px;
     font-weight: 700;
+    padding: 10px 0;
 }
 
 .brand_imgBox {
@@ -220,31 +452,55 @@ select {
 }
 
 .mainContent .itm01 {
-    flex: 1;
     background-color: #8aba2b;
 }
 
 .mainContent .itm02 {
-    flex: 1;
     background-color: #2ebad2;
 }
 
-.mainContent .itm02 dt {}
+.mainContent .itm02 {
+    background-color: #2ebad2;
+}
 
 .mainContent .itm03 {
-    flex: 1;
     background-color: #5c5758;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+    .mainContent {
+        padding: 50px 0;
+
+    }
+
+
+    .inner {
+        flex-direction: column;
+        width: auto;
+        padding: 0 15px;
+    }
+
+    .mainContent .inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
 
 
 /* mainBanner */
 
 
 .mainBanner {
-
     padding: 100px 0;
     display: flex;
-    background: #f2f2f2;
 }
 
 .mainBanner .inner {
@@ -256,23 +512,10 @@ select {
     flex: 1;
 }
 
-
-.mainBanner .left img {
-    height: 200px;
-}
-
 .mainBanner .right {
-    padding-top: 5px;
+    padding-top: 10px;
     flex: 1;
 }
-
-
-.mainBanner .right h2 {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-
 
 .mainBanner .right .text {
     display: flex;
@@ -283,7 +526,6 @@ select {
 .news_list {
     display: block;
 }
-
 
 .news_list .subj {
     font-size: 16px;
@@ -329,20 +571,18 @@ select {
 
 .mainChannel h2 {
     font-size: 30px;
-    font-weight: 500;
     padding: 30px 0;
 }
 
 .mainChannel .sns_left {
     flex: 1;
-
 }
 
 .mainChannel .sns_right {
     flex: 1;
 }
 
-/* Footernpm  */
+/* footer */
 
 
 .Footer {
@@ -365,13 +605,11 @@ select {
 
 .Footer .top .left {
     font-size: 0;
-
 }
 
 .Footer .top .left li {
     display: inline-block;
     font-size: 15px;
-
 }
 
 
@@ -390,21 +628,15 @@ select {
     gap: 10px;
 }
 
-.Footer .top .right a {
+.Footer .top .right i {
     font-size: 20px;
-    padding: 10px 15px;
+    padding: 10px;
     background: #f2f2f2;
     border-radius: 50%;
 }
 
 .Footer .bottom {
-    line-height: 30px;
-}
-
-.Footer .bottom .copy {
-    font-size: 13px;
-
-
+    line-height: 80px;
 }
 
 #f_link {
@@ -412,9 +644,59 @@ select {
     outline: none;
     padding: 5px 20px;
     background: #f2f2f2;
-    margin-top: 20px;
+    border: 1px solid #ddd;
 }
 
 #f_link option {
     padding: 5px 20px;
+}
+
+
+@media (max-width: 768px) {
+    .Footer {
+        padding: 30px 0;
+    }
+
+    .Footer .inner {
+        text-align: center;
+        flex-direction: column;
+        width: auto;
+        padding: 0 15px;
+    }
+
+    .Footer .top {
+        line-height: 50px;
+    }
+
+
+    .Footer .top .left li {
+        font-size: 14px;
+    }
+
+    .Footer .top .left li~li::before {
+        content: "";
+        margin: 0 10px;
+    }
+
+    .Footer .top .right {
+        margin: 0 auto;
+    }
+
+    .Footer .bottom {
+        line-height: 30px;
+    }
+
+    #f_link {
+        margin-top: 30px;
+        border: none;
+        outline: none;
+        padding: 5px 20px;
+        background: #f2f2f2;
+        border: 1px solid #ddd;
+    }
+
+    #f_link option {
+        padding: 5px 20px;
+    }
+
 }

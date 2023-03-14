@@ -320,6 +320,12 @@ button {
         background: url('../public/assets/mainVisual04_small.jpg')no-repeat center center/cover;
         height: 460px;
     }
+
+
+    .arrow {
+        display: none;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {

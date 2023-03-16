@@ -1,6 +1,39 @@
 import { Link } from "react-router-dom";
+import jQuery from "jquery";
+import $ from "jquery";
+
+
+
+
+$(function () {
+
+
+    $('.m_open').on('click', function () {
+        $('.Header').toggleClass('on');
+        $('.m_btn').toggleClass('on');
+    });
+
+    $('.Header').on('scroll wheel touchmove', function () {
+        if ($(this).hasClass('on')) {
+            return false;
+        }
+    });
+
+
+    $('.Header .search_toggle button').on('click', function () {
+        $('.Header .search').toggleClass('on')
+    })
+
+});
+
+
+
+
+
+
 
 function Header() {
+
     return (
         <header className="Header">
             <>

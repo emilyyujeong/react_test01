@@ -14,7 +14,8 @@
 }
 
 ul,
-ol {
+ol,
+li {
     list-style: none;
 }
 
@@ -44,6 +45,8 @@ body {
     font-size: 16px;
     line-height: 1;
     color: #303030;
+
+    word-break: keep-all;
 }
 
 .cf::after,

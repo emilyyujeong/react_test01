@@ -82,11 +82,44 @@
 }
 
 .Header .gnb>ul a {
+    position: relative;
     display: block;
 }
 
 .Header .gnb>ul a:hover {
     color: #00babb;
+}
+
+
+.Header .gnb>ul>li .menu_wrap {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 500;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 999;
+    display: none;
+
+}
+
+.Header .gnb>ul>li:hover .menu_wrap {
+    display: block;
+}
+
+
+.Header .gnb>ul>li .submenu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
 }
 
 
@@ -344,7 +377,7 @@ button {
 .arrow {
     font-size: 50px;
     position: absolute;
-    top: 30%;
+    top: 35%;
 }
 
 .arrow .arrow_left {
@@ -359,7 +392,28 @@ button {
 
 /* mainContent */
 
-select {
+.mainContent {
+    padding: 50px 0 100px 0;
+}
+
+
+.select_branch {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 0 50px 0;
+    background: linear-gradient(132.22deg, #ACF5F5 -3.13%, #F5EDC1 94.95%);
+}
+
+.mainContent .select_branch .find_img {
+    position: absolute;
+    width: 300px;
+    right: 18%;
+    bottom: 15%;
+
+}
+
+.mainContent select {
     width: 200px;
     padding: 5px 30px;
 
@@ -367,17 +421,15 @@ select {
     line-height: 20px;
     border: 1px solid #ccc;
     background: url('../public/assets/arrow.jpg') no-repeat 95% 50%;
+    background-color: #fff;
     border-radius: 4px;
     appearance: none;
 }
 
+.mainContent span {
+    margin-right: 10px;
 
-.select_branch {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
 }
-
 
 
 
@@ -399,20 +451,6 @@ select {
 
 }
 
-
-
-
-
-
-
-
-
-.mainContent {
-    padding: 100px 0;
-
-}
-
-
 .mainContent h2 {
     font-size: 25px;
     font-weight: 700;
@@ -427,35 +465,70 @@ select {
     gap: 30px;
 }
 
+.mainContent .itm01,
+.mainContent .itm02,
+.mainContent .itm03 {
+    flex: 1;
+}
+
+
 .mainContent .brand_item {
     height: 580px;
     border-radius: 20px;
 }
 
+
+
 .mainContent .brand_item .cap {
     padding: 30px 35px;
 }
+
+
+
 
 .mainContent .brand_logo {
     display: block;
     padding-top: 5px;
 }
 
+.mainContent .itm02 .brand_logo img,
+.mainContent .itm03 .brand_logo img {
+    margin: 10px 0 20px 0;
+}
+
+
+.mainContent .itm02 .brand_imgbox,
+.mainContent .itm03 .brand_imgbox {
+    padding-top: 60px;
+}
+
+
 .mainContent .brand_item .brand_info {
-    line-height: 30px;
+    line-height: 20px;
     color: #fff;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .mainContent .brand_item .brand_info dt {
+    line-height: 40px;
     font-size: 30px;
     font-weight: 700;
     padding: 10px 0;
 }
 
-.brand_imgBox {
-    text-align: end;
+.mainContent .brand_item .brand_info dd {
+    padding: 10px 0;
+    line-height: 20px;
+
 }
+
+.brand_imgbox {
+    text-align: end;
+    padding: 0 30px;
+
+}
+
+
 
 .mainContent .itm01 {
     background-color: #8aba2b;
@@ -501,67 +574,267 @@ select {
 
 
 
-/* mainBanner */
 
 
-.mainBanner {
+/* mainNotice */
+
+
+.mainNotice {
     padding: 100px 0;
     display: flex;
 }
 
-.mainBanner .inner {
+.mainNotice .inner {
     display: flex;
     gap: 30px;
 }
 
-.mainBanner .left {
+.mainNotice .inner>div {
     flex: 1;
+
 }
 
-.mainBanner .right {
-    padding-top: 10px;
-    flex: 1;
+.mainNotice .news_list:not(:last-child) {
+    margin-right: 20px;
+    border-right: 1px solid #EFEFEF;
 }
 
-.mainBanner .right .text {
+.mainNotice .news_list {
+    min-width: 350px;
+}
+
+.mainNotice h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.mainNotice li {
+    width: auto;
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mainNotice .news_list a {
+    display: block;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #00BABB;
+
+}
+
+
+.mainNotice .news_list a::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    vertical-align: middle;
+    border-radius: 20px;
+    background: url(../public/assets/sNext.png) no-repeat 7px center / 6px;
+    background-color: #00BABB;
+}
+
+/* mainBanner */
+
+.mainBanner {
+    padding: 100px 0;
+    background-color: #F5F8FA;
+
+}
+
+.mainBanner h2 {
+    margin-bottom: 60px;
+    font-size: 42px;
+    text-align: center;
+}
+
+.mainBanner strong {
+    font-weight: 700;
+}
+
+
+.mainBanner .inner .categories ul {
+    display: flex;
+}
+
+
+.mainBanner .card01 .clickF {
+    background: url(../public/assets/CD.png)no-repeat center center/contain;
+
+}
+
+.mainBanner .card01 .clickB {
+    background: url(../public/assets/cl_CD.png)no-repeat center center/contain;
+
+}
+
+
+.mainBanner .card02 .clickF {
+    background: url(../public/assets/AP.png)no-repeat center center/contain;
+
+}
+
+.mainBanner .card02 .clickB {
+    background: url(../public/assets/cl_AP.png)no-repeat center center/contain;
+
+}
+
+
+.mainBanner .card03 .clickF {
+    background: url(../public/assets/MT.png)no-repeat center center/contain;
+
+}
+
+.mainBanner .card03 .clickB {
+    background: url(../public/assets/cl_MT.png)no-repeat center center/contain;
+
+}
+
+.mainBanner .card04 .clickF {
+    background: url(../public/assets/MG.png)no-repeat center center/contain;
+
+}
+
+.mainBanner .card04 .clickB {
+    background: url(../public/assets/cl_MG.png)no-repeat center center/contain;
+
+}
+
+
+.flip {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    perspective: 1100px;
+    margin: 2rem;
+
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: .4s;
+    transform-style: preserve-3d;
+}
+
+.clickF,
+.clickB {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 25px;
+}
+
+.clickB {
+    transform: rotateY(180deg);
+}
+
+.flip:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+
+/* mainEvent */
+
+.mainEvent {
+    padding: 100px 0;
+}
+
+
+.mainEvent .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.mainEvent .inner .left {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 15px;
+    padding: 70px 20px 40px 20px;
+    flex: 1;
+    background-color: rgb(58, 55, 153);
+    color: #fff;
+    border-radius: 25px;
 }
 
-.news_list {
-    display: block;
+.mainEvent .inner .left .strong {
+    line-height: 40px;
+    padding-bottom: 50px;
 }
 
-.news_list .subj {
-    font-size: 16px;
-    color: #000;
-    display: block;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    word-wrap: normal;
+.mainEvent .inner .left>div {
+    flex: 1;
+}
 
-    display: inline-block;
-    max-width: calc(100% - 42px);
+.mainEvent .inner .right {
+    flex: 1;
+    display: flex;
+
+    background: rgb(245, 246, 247);
+    border-radius: 25px;
+    padding: 70px 20px 30px 20px;
+}
+
+.mainEvent .inner .right .event_rr {
+    flex: 6;
+    display: block;
+    line-height: 25px;
+}
+
+.mainEvent .inner .right .event_rl {
     vertical-align: middle;
+    flex: 4;
 }
 
-.news_list li {
-    border-top: solid 1px #ddd;
-    padding: 15px 0 16px;
-    position: relative;
+.mainEvent .inner .right p {
+    padding-bottom: 20px;
+
 }
 
-.news_list .date {
-    display: block;
-    font-size: 12px;
+.mainEvent .inner .right a {
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: 14px;
 }
+
+.mainEvent .inner .right a::after {
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: -16px;
+    width: 10px;
+    height: 10px;
+    background: url(../public/assets/bg_global_brand_dep.png) no-repeat center / 7px;
+}
+
+
+.mainEvent .inner h3 {
+
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.mainEvent .inner .strong {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.mainEvent .inner p {
+    font-size: 14px;
+}
+
+
+
+
 
 
 /* mainChannel */
@@ -587,6 +860,10 @@ select {
 .mainChannel .sns_right {
     flex: 1;
 }
+
+
+
+
 
 /* footer */
 

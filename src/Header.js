@@ -46,10 +46,34 @@ function Header() {
                     </h1>
                     <nav className="gnb">
                         <ul>
-                            <li><a href="">브랜드소개</a></li>
-                            <li><a href="">입학안내</a></li>
-                            <li><a href="">채널 크레버스</a></li>
-                            <li><a href="">이벤트</a></li>
+                            <li>
+                                <a href="">브랜드소개</a>
+                                <div className="menu_wrap">
+                                    <ul className="submenu">
+                                        <li><a href="">청담어학원</a></li>
+                                        <li><a href="">April어학원</a></li>
+                                        <li><a href="">CMS영재관</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">입학안내</a>
+                                <div className="menu_wrap">
+                                    <ul className="submenu">
+                                        <li><a href="">국내학원</a></li>
+                                        <li><a href="">해외학원</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">채널 크레버스</a>
+                                <div className="menu_wrap">
+                                    <ul className="submenu">
+                                        <li><a href="">크레버스 소식</a></li>
+                                        <li><a href="">크레버스 스토리</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">스토리</a></li>
+                            <li><a href="">톡톡에듀</a></li>
                         </ul>
                     </nav>
 

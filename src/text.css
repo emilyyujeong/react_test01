@@ -64,7 +64,7 @@
 }
 
 .Header h1 img {
-    width: 70%;
+    width: 60%;
 }
 
 .Header .inner {
@@ -126,10 +126,6 @@
 
 /* MOBILE OPEN BUTTON CSS STYLE */
 
-
-.Header h1 img {
-    width: 30%;
-}
 
 button {
     vertical-align: middle;
@@ -581,7 +577,6 @@ button {
 
 .mainNotice {
     padding: 100px 0;
-    display: flex;
 }
 
 .mainNotice .inner {
@@ -742,6 +737,26 @@ button {
 
 
 
+
+@media (max-width: 768px) {
+
+    .mainBanner .inner .categories ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flip {
+        width: auto;
+        height: 200px;
+    }
+
+    .card {
+        width: auto;
+    }
+
+
+}
+
 /* mainEvent */
 
 .mainEvent {
@@ -757,11 +772,15 @@ button {
 .mainEvent .inner .left {
     display: flex;
     justify-content: space-between;
-    padding: 70px 20px 40px 20px;
+    padding: 70px 20px 70px 20px;
     flex: 1;
     background-color: rgb(58, 55, 153);
     color: #fff;
     border-radius: 25px;
+}
+
+.mainEvent .inner .left .event_ll {
+    margin-top: -30px;
 }
 
 .mainEvent .inner .left .strong {
@@ -801,10 +820,11 @@ button {
 .mainEvent .inner .right a {
     position: absolute;
     font-size: 14px;
+    font-weight: 500;
 }
 
-.mainEvent .inner .right a::after {
 
+.mainEvent .inner .right a::after {
     content: '';
     display: block;
     position: absolute;
@@ -814,6 +834,8 @@ button {
     height: 10px;
     background: url(../public/assets/bg_global_brand_dep.png) no-repeat center / 7px;
 }
+
+
 
 
 .mainEvent .inner h3 {

@@ -142,7 +142,7 @@ button {
 .m_btn {
     position: relative;
     font-size: 0;
-    width: 50px;
+    width: 40px;
     height: 40px;
     right: 40px;
     background: #fff;
@@ -166,7 +166,7 @@ button {
 }
 
 .m_btn::after {
-    bottom: 6px;
+    bottom: 10px;
 }
 
 .m_btn.on::before {
@@ -184,7 +184,7 @@ button {
 .m_btn span::after {
     content: "";
     position: absolute;
-    top: 18px;
+    top: 16px;
     left: 5px;
     right: 5px;
     height: 2px;
@@ -212,13 +212,21 @@ button {
         display: block;
     }
 
+
     .Header h1 {
-        position: relative;
+        position: fixed;
         z-index: 9999;
+        width: 80%;
+
     }
 
     .Header.on h1 {
         position: fixed;
+
+    }
+
+    .Header .gnb>ul a:hover {
+        color: #00babb;
     }
 
     .Header .gnb {
@@ -236,9 +244,8 @@ button {
         z-index: 9998;
 
         width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        display: none;
+        height: 80px;
+        background: #fff;
     }
 
     .Header.on .inner::before {
@@ -266,6 +273,13 @@ button {
         padding: 150px 15px 0 15px;
     }
 
+
+    .Header .gnb>ul a {
+        position: relative;
+        display: block;
+    }
+
+
     .Header.on .gnb>ul {
         left: 0;
     }
@@ -274,6 +288,7 @@ button {
         line-height: 10px;
     }
 
+
     .Header .gnb>ul>li~li::before {
         display: none;
     }
@@ -281,6 +296,10 @@ button {
 
     .Header:hover .gnb::before {
         display: none;
+    }
+
+    .Header .gnb>ul>li .menu_wrap {
+        border: none;
     }
 
     .Header .m_open {
@@ -303,9 +322,11 @@ button {
 /* MOBILE RESPONSIVE VERSION CONTENT(MAINVISUAL) */
 
 @media only screen and (max-width: 768px) {
+
     .slide .itm01 {
         background: url('../public/assets/mainVisual01_small.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 }
 
@@ -313,6 +334,7 @@ button {
     .slide .itm01 {
         background: url('../public/assets/mainVisual01.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 }
 
@@ -320,6 +342,7 @@ button {
     .slide .itm02 {
         background: url('../public/assets/mainVisual02_small.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 }
 
@@ -327,6 +350,7 @@ button {
     .slide .itm02 {
         background: url('../public/assets/mainVisual02.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 }
 
@@ -334,6 +358,7 @@ button {
     .slide .itm03 {
         background: url('../public/assets/mainVisual03_small.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 }
 
@@ -341,6 +366,7 @@ button {
     .slide .itm03 {
         background: url('../public/assets/mainVisual03.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 }
 
@@ -348,6 +374,7 @@ button {
     .slide .itm04 {
         background: url('../public/assets/mainVisual04_small.jpg')no-repeat center center/cover;
         height: 460px;
+        margin-top: 80px;
     }
 
 
@@ -444,6 +471,14 @@ button {
         margin-bottom: 30px;
     }
 
+    .select_branch .find_img {
+        display: none;
+    }
+
+    .mainContent .select_branch select>option {
+        padding-left: 10px;
+
+    }
 
 }
 
@@ -564,6 +599,14 @@ button {
         flex-direction: column;
     }
 
+    .mainContent .itm01 .brand_imgbox,
+    .mainContent .itm02 .brand_imgbox,
+    .mainContent .itm03 .brand_imgbox {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
 }
 
 
@@ -633,6 +676,14 @@ button {
     background: url(../public/assets/sNext.png) no-repeat 7px center / 6px;
     background-color: #00BABB;
 }
+
+
+@media (max-width: 768px) {
+    .mainNotice {
+        padding: 50px 0;
+    }
+}
+
 
 /* mainBanner */
 
@@ -740,19 +791,25 @@ button {
 
 @media (max-width: 768px) {
 
+    .mainBanner {
+        padding: 50px 0;
+    }
+
     .mainBanner .inner .categories ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .flip {
-        width: auto;
-        height: 200px;
+    .mainBanner .inner .categories {
+        padding: 20px 0 0;
     }
 
-    .card {
+    .flip {
         width: auto;
+        margin: 10px;
+        height: 170px;
     }
+
 
 
 }
@@ -808,7 +865,6 @@ button {
 }
 
 .mainEvent .inner .right .event_rl {
-    vertical-align: middle;
     flex: 4;
 }
 
@@ -835,9 +891,6 @@ button {
     background: url(../public/assets/bg_global_brand_dep.png) no-repeat center / 7px;
 }
 
-
-
-
 .mainEvent .inner h3 {
 
     font-size: 20px;
@@ -855,7 +908,62 @@ button {
 }
 
 
+@media (max-width: 768px) {
+    .mainEvent {
+        padding: 50px 0;
+    }
 
+    .mainEvent .inner h3 {
+        line-height: 35px;
+    }
+
+    .mainEvent .inner .left {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+        flex: 1;
+        background-color: rgb(58, 55, 153);
+        color: #fff;
+        border-radius: 25px;
+    }
+
+    .mainEvent .inner .right {
+        flex: 1;
+        display: flex;
+
+        background: rgb(245, 246, 247);
+        border-radius: 25px;
+        padding: 30px 20px 50px 20px;
+    }
+
+
+    .mainEvent .inner h3 {
+
+        font-size: 15px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+
+    .mainEvent .inner .strong {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .mainEvent .inner p {
+        font-size: 12px;
+    }
+
+
+    .mainEvent .inner .left .event_ll {
+        margin-top: 30px;
+    }
+
+    .mainEvent .inner .right .event_rl {
+        display: none;
+    }
+
+}
 
 
 

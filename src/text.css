@@ -326,7 +326,7 @@ button {
     .slide .itm01 {
         background: url('../public/assets/mainVisual01_small.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 }
 
@@ -334,7 +334,7 @@ button {
     .slide .itm01 {
         background: url('../public/assets/mainVisual01.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 }
 
@@ -342,7 +342,7 @@ button {
     .slide .itm02 {
         background: url('../public/assets/mainVisual02_small.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 }
 
@@ -350,7 +350,7 @@ button {
     .slide .itm02 {
         background: url('../public/assets/mainVisual02.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 }
 
@@ -358,7 +358,7 @@ button {
     .slide .itm03 {
         background: url('../public/assets/mainVisual03_small.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 }
 
@@ -366,7 +366,7 @@ button {
     .slide .itm03 {
         background: url('../public/assets/mainVisual03.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 }
 
@@ -374,7 +374,7 @@ button {
     .slide .itm04 {
         background: url('../public/assets/mainVisual04_small.jpg')no-repeat center center/cover;
         height: 460px;
-        margin-top: 80px;
+
     }
 
 
@@ -653,6 +653,7 @@ button {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    line-height: 25px;
 }
 
 .mainNotice .news_list a {
